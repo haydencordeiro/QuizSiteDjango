@@ -9,3 +9,11 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return "%s's profile" % self.user
+
+
+class Question(models.Model):
+    questionText = models.CharField(max_length=1000)
+    image = models.ImageField()
+
+    def __str__(self):
+        return str(self.questionText)

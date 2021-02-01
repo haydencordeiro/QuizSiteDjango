@@ -1,13 +1,19 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from .services import *
+from .selectors import *
 from django.http import HttpResponsePermanentRedirect
 from django.shortcuts import render, get_object_or_404, get_list_or_404, reverse
 
 
 def index(request):
+    context = {
+        'questions': []
+    }
+    if request.user.is_authenticated:
+        context['questions'] = get_questions()
 
-    return render(request, 'index.html')
+    return render(request, 'index.html', context)
 
 
 def login(request):

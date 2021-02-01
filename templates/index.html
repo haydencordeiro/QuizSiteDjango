@@ -14,7 +14,9 @@
     <a href="{% url 'logoutfromsite' %}">Logout</a>
 
     <div>
-        <h1>Please select</h1>
+        {% for i in questions %}
+        <img src="{{ i.image.url }}">
+        {% endfor %}
     </div>
 
 
