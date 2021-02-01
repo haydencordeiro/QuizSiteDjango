@@ -32,4 +32,4 @@ def user_login(request, username: str, password: str) -> User:
 
 
 def user_logout(request) -> None:
-    auth.logout(request)
+    logout(request)

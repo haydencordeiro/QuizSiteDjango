@@ -6,6 +6,7 @@ from django.shortcuts import render, get_object_or_404, get_list_or_404, reverse
 
 
 def index(request):
+
     return render(request, 'index.html')
 
 
@@ -28,6 +29,6 @@ def register(request):
         return render(request, 'register.html')
 
 
-def logoutFromSite(request):
+def logoutfromsite(request):
     user_logout(request)
     return HttpResponsePermanentRedirect(reverse('index'))

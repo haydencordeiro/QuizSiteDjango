@@ -11,7 +11,12 @@
     This is the home page
     {% if user.is_authenticated %}
     <p>Welcome {{ user.username }} !!!</p>
-    <a href="{% url 'logoutFromSite' %}">Logout</a>
+    <a href="{% url 'logoutfromsite' %}">Logout</a>
+
+    <div>
+        <h1>Please select</h1>
+    </div>
+
 
     {% else %}
     <a href="{% url 'login' %}">Login</a>
